@@ -1,0 +1,253 @@
+/*Presets start*/
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: "IBM Plex Sans Arabic", sans-serif;
+}
+
+
+.shadow {
+    box-shadow: 0px 0px 5px 1px lightgray;
+}
+
+/*Presets End*/
+/*              ###############################
+                #   Pre-Design Notes Start    #
+                ############################### 
+=============================
+- The site has 4 screen sizez:
+=============================
+-- 500px  - 639px  (small)
+-- 640px  - 767px  (medium)
+-- 768px  - 1023px (large)
+-- 1024px - 1279px (x-large)              
+*/
+
+
+
+/*              ##############################
+                #  Mobile First Design Start #
+                ############################## 
+                
+*/
+/*Container Start*/
+/* #container  {
+    display: grid;
+} */
+
+
+/*Main Content Start*/
+#container {
+    display: grid;
+    grid-template-columns: 18fr 2fr;
+    grid-template-rows: 1fr;
+}
+
+#container main {
+    display: block;
+}
+
+#container main header {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 2fr;
+    box-shadow: 0px 0px 3px 1px lightgray;
+    margin: 10px;
+    border-radius: 25px;
+}
+
+#container main header .header-main {
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+    padding: 15px;
+}
+
+#container main header .header-main .header-main-mudabbir-icon {
+    background-color: #2854F4;
+    padding: 15px;
+    display: flex;
+    justify-items: center;
+    border-radius: 10px;
+}
+
+#container main header .header-main .header-main-mudabbir .mudabbir-name {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 32px;
+}
+
+#container main header .header-main .header-main-mudabbir-icon .fa-coins {
+    color: white;
+    font-size: 15px;
+}
+
+#container main header .header-main #container main header .mudabbir-side {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+#container main header .header-side .user-container {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    padding: 20px;
+}
+
+#container main header .header-side .user-container .img-wrapp .user-img {
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    padding: 10px;
+
+    border-radius: 15px;
+}
+
+#container main header .header-side .user-container .img-wrapp .user-img img {
+    max-width: 100%;
+    border-radius: 15px;
+}
+
+#container main header .header-side .user-container .img-wrapp .user-info .user-name,
+#container main header .header-side .user-container .img-wrapp .user-info .user-account {
+    display: none;
+}
+
+#container main header .header-side .user-container .user-icons {
+    display: flex;
+    flex-direction: row-reverse;
+    column-gap: 10px;
+    align-items: center;
+}
+
+#container main header .header-side .user-container .user-icons .search,
+#container main header .header-side .user-container .user-icons .notification {
+    box-shadow: 0px 0px 5px 1px #f5f5f5;
+    padding: 5px;
+    border-radius: 10px;
+    transition: 500ms;
+    position: relative;
+
+}
+
+#container main header .header-side .user-container .user-icons .notification .notify {
+    color: white;
+    display: inline-block;
+    background-color: red;
+    padding: 5px;
+    font-size: 14px;
+    border-radius: 50%;
+    width: 5px;
+    height: 5px;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    right: -3px;
+}
+
+#container main header .header-side .user-container .user-icons .search:hover,
+#container main header .header-side .user-container .user-icons .notification:hover {
+    background-color: rgb(236, 236, 236);
+}
+
+#container main header .header-side .online .online-lamp {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #6FE19C;
+    display: inline-block;
+    margin-left: 10px;
+}
+
+#container main header .header-side .online {
+    text-align: center;
+    background-color: #F0FDF4;
+    padding: 5px 10px;
+    border-radius: 20px;
+    align-self: center;
+    width: 20%;
+}
+
+/*================================================================*/
+/*                          Balance                               */
+/*================================================================*/
+
+/*Main Content End*/
+
+/*============================================*/
+
+/*Side Navbar Start*/
+#container sidebar {
+    display: none;
+}
+
+/*Side Navbar End*/
+
+/*Container End*/
+
+
+/*==============================================*/
+/*          Responsive Media Queries            */
+/*=============================================*/
+
+/*tablet*/
+
+@media screen and (min-width:640px) {
+    #container main header {
+        display: grid;
+        grid-template-columns: 2fr 3fr;
+        grid-template-rows: 1fr;
+    }
+
+    #container main header .header-side {
+        flex-direction: row-reverse;
+        justify-content: space-between;
+    }
+
+    #container main header .header-side .online {
+        align-self: center;
+
+    }
+
+    #container main header .header-side .user-container {
+        justify-content: space-between;
+        flex-direction: row-reverse;
+        padding: 20px;
+    }
+
+    #container main header .header-side .user-container .img-wrapp {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        column-gap: 15px;
+    }
+
+    #container main header .header-side .user-container .img-wrapp .user-info .user-name {
+        display: block;
+    }
+}
+
+
+/*Desktop*/
+@media screen and (min-width:768px) {
+
+    #container {
+        display: grid;
+        grid-template-columns: 18fr 1fr;
+        grid-template-rows: 1fr;
+    }
+
+    #container main header .header-side .user-container .img-wrapp .user-info .user-account {
+        display: block;
+    }
+
+    #container sidebar {
+        display: block;
+        position: fixed;
+        right: 0;
+        top: 0;
+        height: 100%;
+    }
+
+}

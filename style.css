@@ -1,57 +1,25 @@
-/*
-Presets
-*/
-
+/*Presets*/
 * {
     margin: 0;
     padding: 0;
 }
 
-#container {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
+.main {
+    background-color: cornflowerblue;
 }
 
 .sidebar {
-    background-color: aquamarine;
-    display: none;
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    height: 100%;
-
-}
-
-#container main header {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr;
-}
-
-#container main header .header-site-wrapper {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    column-gap: 15px;
-}
-
-#container main header .header-user-wrapper {}
-
-#container main header .header-user-wrapper .user-wrapper-img {
-    width: 40px;
-    height: 40px;
-    padding: 15px;
-    border-radius: 15px;
-}
-
-#container main header .header-user-wrapper .user-wrapper-img img {
-    max-width: 100%;
-    display: block;
-    border-radius: 15px;
-}
-
-main {
     background-color: chartreuse;
+}
+
+/*Container*/
+#container {
+    display: block;
+}
+
+/*Main*/
+
+/*Sidebar*/
+.sidebar {
+    display: none;
 }

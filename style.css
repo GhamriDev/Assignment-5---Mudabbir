@@ -38,6 +38,13 @@
     background-color: #FBE4D4;
 }
 
+.amount {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    column-gap: 5px;
+}
+
 /* .main {
     background-color: cornflowerblue;
     z-index: 1;
@@ -48,9 +55,10 @@
 } */
 
 /*Container*/
+
 #container {
     display: grid;
-    grid-template-columns: 13fr 2fr;
+    grid-template-columns: 13fr auto;
     grid-template-rows: 1fr;
     column-gap: 25px;
     background-color: #F9FAFB;
@@ -106,9 +114,8 @@
 }
 
 #container .main header .user-wrapper .user-img-holder .user-img {
-    width: 50px;
-    height: 50px;
-    padding: 10px;
+    width: 40px;
+    height: 40px;
 }
 
 #container .main header .user-wrapper .user-img-holder .user-img img {
@@ -170,7 +177,7 @@
 
 #container .sidebar .sidebar-wrapper {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: auto;
     grid-template-rows: 1fr repeat(2, 2fr);
     row-gap: 15px;
     height: 40%;
@@ -264,7 +271,6 @@
 
 }
 
-#container .main .balance .expenses {}
 
 #container .main .balance .balance-card {
     display: flex;
@@ -304,7 +310,222 @@
     color: #E7000B;
 }
 
+/*--------------------------------------------------------------*/
+
+/*Middle*/
+
+
+#container .middle {
+    /* background-color: cornflowerblue; */
+    /* height: 100vh; */
+    margin: 30px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr;
+    column-gap: 35px;
+}
+
+#container .middle .newest-activities-bills {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    row-gap: 15px;
+
+
+}
+
+#container .middle .newest-activities-bills .newest-activities,
+#container .middle .newest-activities-bills .monthly-bills {
+    background-color: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 1px 1px lightgray;
+
+}
+
+#container .middle .newest-activities-bills .newest-activities .add-new-account,
+#container .middle .newest-activities-bills .newest-activities .add-new-card {
+    border-left: 5px solid;
+    padding: 10px;
+    border-radius: 10px;
+    /* box-shadow: 1px 1px 2px 0px lightgray; */
+}
+
+#container .middle .newest-activities-bills .newest-activities .add-new-account {
+    border-color: #2B7FFF;
+}
+
+#container .middle .newest-activities-bills .newest-activities .add-new-card {
+    border-color: #00C950;
+}
+
+#container .middle .newest-activities-bills .newest-activities .add-new-account {
+    background-color: #EFF6FF;
+}
+
+#container .middle .newest-activities-bills .newest-activities .add-new-card {
+    background-color: #F0FDF4;
+}
+
+
+#container .middle .newest-activities-bills .newest-activities .add-new-account .new-account-top,
+#container .middle .newest-activities-bills .newest-activities .add-new-card .new-card-top {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+    column-gap: 15px;
+    /* padding: 2px; */
+}
+
+#container .middle .newest-activities-bills .newest-activities .add-new-account .new-account-top .top-icon,
+#container .middle .newest-activities-bills .newest-activities .add-new-account .new-account-top .top-service,
+#container .middle .newest-activities-bills .newest-activities .add-new-card .new-card-top .top-icon,
+#container .middle .newest-activities-bills .newest-activities .add-new-card .new-card-top .top-service {
+    flex-grow: 1;
+}
+
+#container .middle .newest-activities-bills .newest-activities .add-new-account .new-account-top .top-header,
+#container .middle .newest-activities-bills .newest-activities .add-new-card .new-card-top .top-header {
+    flex-grow: 3;
+    text-align: right;
+}
+
+#container .middle .newest-activities-bills .newest-activities .add-new-account .new-account-top {
+    background-color: #EFF6FF;
+}
+
+#container .middle .newest-activities-bills .newest-activities .add-new-account .new-account-top .top-icon,
+#container .middle .newest-activities-bills .newest-activities .add-new-card .new-card-top .top-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25px;
+    height: 25px;
+}
+
+#container .middle .newest-activities-bills .newest-activities .add-new-account .new-account-top .top-icon .fa-solid,
+#container .middle .newest-activities-bills .newest-activities .add-new-card .new-card-top .top-icon .fa-solid {
+    font-size: 22px;
+}
+
+#container .middle .newest-activities-bills .newest-activities .add-new-account .new-account-top .top-icon .fa-solid {
+    color: #155DFC;
+}
+
+#container .middle .newest-activities-bills .newest-activities .add-new-card .new-card-top .top-icon .fa-solid {
+    color: #00A63E;
+}
+
+
+#container .middle .newest-activities-bills .newest-activities .add-new-card .new-card-top .top-icon #container .middle .newest-activities-bills .newest-activities .add-new-account .new-account-top .top-icon {
+    border-radius: 50%;
+    box-shadow: 0 0 5px 0 lightgray;
+}
+
+#container .middle .newest-activities-bills .newest-activities .add-new-account .account-duration,
+#container .middle .newest-activities-bills .newest-activities .add-new-card .card-duration {
+    display: block;
+    width: 70%;
+    margin: 10px auto;
+    text-align: right;
+
+}
+
+#container .middle .newest-activities-bills .monthly-bills .monthly-top,
+#container .middle .latest-treats .latest-treats-top {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+}
+
+#container .middle .newest-activities-bills .monthly-bills .monthly-total {
+    text-align: center;
+}
+
+#container .middle .newest-activities-bills .monthly-bills .monthly-total .total-bills-amount {
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 36px;
+}
+
+#container .middle .newest-activities-bills .monthly-bills .main-bills {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    row-gap: 10px;
+    column-gap: 10px;
+    margin-top: 15px;
+}
+
+#container .middle .newest-activities-bills .monthly-bills .main-bills .child {
+    background-color: #f9f9f9;
+    ;
+    border-radius: 15px;
+    padding: 10px;
+    text-align: center;
+}
+
+#container .middle .newest-activities-bills .monthly-bills .main-bills .child .bill-type-icon .fa-solid {
+    padding: 7px;
+    border-radius: 10px;
+}
+
+
+
+#container .middle .latest-treats {
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+}
+
+#container .middle .latest-treats .treats-table {
+    margin-top: 20px;
+}
+
+#container .middle .latest-treats .treats-table tr {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+}
+
+#container .middle .latest-treats .treats-table tr .client {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+}
+
+#container .middle .latest-treats .treats-table tr .client .client-img {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+}
+
+#container .middle .latest-treats .treats-table tr .client .client-img img {
+    max-width: 100%;
+    display: block;
+    border-radius: 50%;
+}
+
 /*Media Queries*/
+
+
+@media screen and (max-width:1790px) {
+
+    #container .sidebar .sidebar-wrapper .sidebar-header .sidebar-sitename .sidebar-name-mudabbir,
+    #container .sidebar .sidebar-wrapper .sidebar-header .sidebar-sitename .sidebar-name-slogan,
+    #container .sidebar .sidebar-wrapper .navigation-section .navigation-section-name,
+    #container .sidebar .sidebar-wrapper .navigation-section-home .navigation-section-name,
+    #container .sidebar .sidebar-wrapper .sidebar-procedure .procedure-name,
+    #container .sidebar .sidebar-wrapper .sidebar-procedures .procedures-title {
+        display: none;
+    }
+
+    #container .sidebar .sidebar-wrapper,
+    #container .sidebar .sidebar-wrapper .sidebar-header {
+        padding: 0;
+    }
+
+}
 
 @media screen and (max-width: 768px) {
     #container {

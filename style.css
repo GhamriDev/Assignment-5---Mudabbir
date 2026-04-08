@@ -330,8 +330,6 @@
     flex-direction: column;
     justify-content: start;
     row-gap: 15px;
-
-
 }
 
 #container .middle .newest-activities-bills .newest-activities,
@@ -340,6 +338,7 @@
     padding: 15px;
     border-radius: 10px;
     box-shadow: 0 0 1px 1px lightgray;
+    height: 50%;
 
 }
 
@@ -417,10 +416,6 @@
 }
 
 
-#container .middle .newest-activities-bills .newest-activities .add-new-card .new-card-top .top-icon #container .middle .newest-activities-bills .newest-activities .add-new-account .new-account-top .top-icon {
-    border-radius: 50%;
-    box-shadow: 0 0 5px 0 lightgray;
-}
 
 #container .middle .newest-activities-bills .newest-activities .add-new-account .account-duration,
 #container .middle .newest-activities-bills .newest-activities .add-new-card .card-duration {
@@ -471,7 +466,7 @@
 }
 
 
-
+/* 
 #container .middle .latest-treats {
     display: flex;
     flex-direction: column;
@@ -480,34 +475,100 @@
 
 #container .middle .latest-treats .treats-table {
     margin-top: 20px;
+    text-align: right;
+    width: 100%;
 }
 
 #container .middle .latest-treats .treats-table tr {
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
+    padding: 15px;
+    text-align: center;
+}
+*/
+#container .middle .latest-treats {
+    background-color: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 1px 1px lightgray;
+}
+
+#container .middle .latest-treats .treats-table tr td {
+    padding: 10px 5px;
+    font-weight: bold;
 }
 
 #container .middle .latest-treats .treats-table tr .client {
     display: flex;
-    flex-direction: row-reverse;
-    justify-content: flex-end;
+    flex-direction: row;
+    justify-content: flex-start;
+    column-gap: 15px;
+    align-items: center;
 }
 
 #container .middle .latest-treats .treats-table tr .client .client-img {
-    width: 25px;
-    height: 25px;
+    width: 45px;
+    height: 45px;
     border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #container .middle .latest-treats .treats-table tr .client .client-img img {
-    max-width: 100%;
-    display: block;
+    width: 100%;
+    /* display: block; */
     border-radius: 50%;
 }
 
-/*Media Queries*/
+/*Last*/
+.flex-between {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+}
 
+.pointer {
+    cursor: pointer;
+}
+
+#container .last-section {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-direction: row-reverse;
+    column-gap: 15px;
+}
+
+#container .last-section .general-budget-view {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+}
+
+#container .last-section .budget-top {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+}
+
+/*
+#container .middle .latest-treats .treats-table tr td {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
+
+/*Media Queries*/
+#container .middle .latest-treats .treats-table {
+    width: 100%;
+    direction: rtl;
+}
+
+#container .middle .latest-treats .treats-table tr td {
+    cell-padding: 10px 5px;
+}
 
 @media screen and (max-width:1790px) {
 
@@ -523,6 +584,35 @@
     #container .sidebar .sidebar-wrapper,
     #container .sidebar .sidebar-wrapper .sidebar-header {
         padding: 0;
+    }
+
+    #container .middle {
+
+        margin: 30px;
+        display: flex;
+        flex-direction: column-reverse;
+        row-gap: 35px;
+        overflow-x: scroll;
+    }
+
+    #container .middle .newest-activities-bills {
+        flex-direction: row;
+        justify-content: start;
+        column-gap: 15px;
+
+    }
+
+    #container .middle .latest-treats {}
+
+    #container .middle .latest-treats .treats-table tr td {
+        font-weight: normal;
+    }
+
+    #container .middle .newest-activities-bills .newest-activities,
+    #container .middle .newest-activities-bills .monthly-bills {
+        /* height: 100%; */
+        flex-grow: 1;
+
     }
 
 }
@@ -557,5 +647,13 @@
 
     #container .main .balance .balance-card {
         width: 90%;
+    }
+
+    #container .middle .newest-activities-bills {
+        display: block;
+    }
+
+    #container .middle .newest-activities {
+        margin-bottom: 20px;
     }
 }
